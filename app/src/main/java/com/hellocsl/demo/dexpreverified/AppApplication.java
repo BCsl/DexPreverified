@@ -16,8 +16,8 @@ import java.io.File;
 public class AppApplication extends Application {
     private static final String TAG = "AppApplication";
     public static final String DEX_NAME = "feature.dex";
-    public static final String PATCH_A_NAME = "pluginimpl-patchA.apk";
-    public static final String PATCH_B_NAME = "pluginimpl-patchB.apk";
+    public static final String PATCH_A_NAME = "pluginimpl-patchA.zip";
+    public static final String PATCH_B_NAME = "pluginimpl-patchB.zip";
     public static final String CLASS_NAME = "com.hellocsl.demo.plugin.FeatureA";
 
     @Override

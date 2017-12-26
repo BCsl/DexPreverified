@@ -20,7 +20,8 @@ import static com.hellocsl.demo.dexpreverified.AppApplication.PATCH_B_NAME;
  *
  * 测试2：防止特定的类被打上 CLASS_ISPREVERIFIED 标志
  *  HotFix 一般的方案是每一个类（除了 Application）都直接引用一个其他 dex 的类，详情见 https://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&mid=400118620&idx=1&sn=b4fdd5055731290eef12ad0d17f39d4a&scene=1&srcid=1106Imu9ZgwybID13e7y2nEi#wechat_redirect
- *  HotFix 应对的是需要热修复类不可预测，如果可预见的某部分接口呢？那么就可以把这部分独立到一个 library 单独打包成 dex 文件，然后单独插入到主程序，这样就可以实现这部分功能的动态变更
+ *  HotFix 应对的是需要热修复类不可预测，如果可预见的某部分接口呢？那么就可以把这部分独立到一个 library 单独打包成 dex 文件，
+ *  然后单独插入到主程序，这样就可以实现这部分功能的动态变更，而且不用重启，因为插件包的 dex 不需要添加到主工程的 ClassLoader 下
  *  还有个问题就是主程序、插件包的对动态变更的 library 的依赖需要用 provided
  *
  *
