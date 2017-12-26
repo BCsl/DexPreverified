@@ -5,7 +5,7 @@ import com.hellocsl.demo.plugin.FeatureA;
 /**
  * Created by chensuilun on 2017/12/26.
  */
-public class FeaturePatchImpl extends FeatureA {
+public class FeaturePatchImpl implements FeatureA {
     @Override
     public String getSign() {
         return "PatchA Sign";
